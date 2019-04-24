@@ -1,4 +1,5 @@
 <script>
+    import { fade, fly } from 'svelte/transition';
 
     import { createEventDispatcher } from 'svelte';
 
@@ -16,7 +17,6 @@
         });
     }
     
-
     export let id; // document ID
     export let text;
     export let complete;
@@ -40,7 +40,7 @@
 </style>
 
 
-<li>
+<li in:fly="{{ x: 900, duration: 500 }}" out:fade>
 
 {#if complete}
     <span class="is-complete">

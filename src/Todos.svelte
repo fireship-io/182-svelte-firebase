@@ -36,7 +36,7 @@
 <ul>
 	{#each $todos as todo}
 
-            <TodoItem {...todo} on:remove={removeItem} on:toggle={updateStatus} />
+        <TodoItem {...todo} on:remove={removeItem} on:toggle={updateStatus} />
         
 	{/each}
 </ul>
